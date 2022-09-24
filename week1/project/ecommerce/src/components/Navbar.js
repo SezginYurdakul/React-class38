@@ -6,9 +6,9 @@ const Navbar = ({ selectCategory, selectedCategory, categoryList }) => {
     <div className="navbar">
       <ul>
         {categoryList.map(category =>
-          <li key={category} className={selectedCategory === category ? "selectedCategory" : null}
+          <li key={category} className={selectedCategory === category && 'selectedCategory'}
             onClick={() => selectCategory(category)}>
-            {category.slice(6).toUpperCase()}
+            {category.replace('FAKE: ', "").toUpperCase()}
           </li>)}
       </ul>
     </div>

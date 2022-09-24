@@ -10,15 +10,15 @@
   margin-left: 1.3em ;
   width: fit-content;
 }
-.navbar {
+.Navbar {
  
 }
-.navbar ul {
+.Navbar ul {
   display: flex;
   justify-content: flex-start;
   
 }
-.navbar ul li{
+.Navbar ul li{
   padding: 0.8rem;
   margin: 3px;
   background-color: #ebebeb;
@@ -28,12 +28,12 @@
   box-shadow: 5px 5px #888888;
 }
 
-.navbar ul .selectedCategory {
+.Navbar ul .selectedCategory {
   background-color: #474747;
   color :#ffff;
 }
 
-.navbar ul li:hover {
+.Navbar ul li:hover {
   background-color: #474747;
   color :#ffff;
   cursor: pointer;
@@ -81,7 +81,7 @@
   .productList{
     grid-template-columns: repeat(1, 1fr);
   }
-  .navbar ul{
+  .Navbar ul{
     flex-direction: column;
   }
   }
@@ -96,7 +96,4 @@
   .productList{
       grid-template-columns: repeat(3, 1fr);
     }
-    
     }
-   
- 
