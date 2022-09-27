@@ -1,32 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import ProductsList from "./components/ProductList";
-import products from "./fake-data/all-products";
-import categoryList from "./fake-data/all-categories";
-
+import Home from "./components/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProductDetails from "./ProductDetail";
 function App() {
-  const [filteredProducts, setfilteredProducts] = useState(products);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const selectCategory = (category) => {
-    const filteredProducts = products.filter(
-      (product) => product.category === category.slice(6)
-    );
-    setSelectedCategory(category);
-    setfilteredProducts(filteredProducts);
-  };
-
   return (
-    <div className=" App">
-      <div className="Banner"><h1>Products</h1> </div>
-      <Navbar
-        categoryList={categoryList}
-        selectedCategory={selectedCategory}
-        selectCategory={selectCategory}
-      />
-      <ProductsList products={filteredProducts} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="products/:id" element={<ProductDetails />} />
+      </Routes>
+    </Router>
   );
 }
 

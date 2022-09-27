@@ -5,12 +5,37 @@
 .App {
   text-align:center;
 }
+.Banner{
+  background-color: #ebebeb;
+}
 .Banner h1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
   font-size: 2em;
   margin-left: 1.3em ;
   width: fit-content;
+  
+}
+.error{
+  background-color: #ad2323;
+  color: #ffff;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left:5px;
 }
 
+
+.loading{
+  background-color: #4a9737;
+  color: #ffff;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
 .navbar ul {
   display: flex;
   justify-content: flex-start;
@@ -50,7 +75,8 @@
   text-align: center;
 }
 
-.productCard {
+
+.productCard{
   padding: 8px auto;
   border-radius: 3px;
   display: flex;
@@ -75,12 +101,42 @@
   margin: 1rem;
 }
 
+.product-details{
+  align-self: center;
+  text-align:center;
+}
+
+.product-description {
+  align-self: center;
+  text-align: justify;
+  padding-top: 1rem;
+  max-width: 40%;
+  margin: auto;
+}
+
+.product-image{
+  margin: auto;
+  max-width: 30%;
+  max-height: 30%;
+}
+
+
+
 @media (max-width:750px) {
   .productList{
     grid-template-columns: repeat(1, 1fr);
   }
   .navbar ul{
     flex-direction: column;
+  }
+  .product-image{
+    max-width: 300px;
+    max-width: 300px;
+  }
+
+  .product-description {
+    max-width: 300px;
+    max-width: 300px;
   }
   }
 
