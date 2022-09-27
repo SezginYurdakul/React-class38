@@ -22,7 +22,9 @@ const ProductDetails = () => {
                 <ul className="product-description">
                     <li >{`Product Discription:${product.description}`}</li>
                 </ul>
-                <Link className="home-button" to="/"> Home Page </Link>
+                <br>
+                </br>
+                <div className='homepage-button'><Link className="home-button" to="/"> Home Page </Link></div>
             </div>
         </div>
     )
