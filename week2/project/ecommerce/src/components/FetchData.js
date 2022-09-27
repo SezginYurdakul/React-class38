@@ -16,7 +16,7 @@ function useFetchData(url, setData) {
                 setError(error.message);
             }
         })();
-    }, [url]);
+    }, [url, setData]);
 
     return { error, isLoading };
 }
