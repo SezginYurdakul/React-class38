@@ -1,6 +1,6 @@
 import Banner from './Banner'
 import React, { useContext, useEffect, useState } from 'react'
-import { json, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { FavoriteContext } from '../context/FavoriteContext'
 import heartRegular from '../assets/heart-regular.svg'
 import heartSolid from '../assets/heart-solid.svg'
