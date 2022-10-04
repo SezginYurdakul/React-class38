@@ -10,6 +10,7 @@ const Navbar = ({ clickHandler, selectedCategory, categoryList }) => {
             onClick={() => clickHandler(category)}>
             {category.toUpperCase()}
           </li>)}
+  
       </ul>
     </div>
   )

@@ -7,15 +7,64 @@
 }
 .Banner{
   background-color: #ebebeb;
+  justify-content: space-between;
+  display: flex;
 }
 .Banner h1 {
+  display: flex;
+  justify-content: flex-end;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 2em;
   margin-left: 1.3em ;
   width: fit-content;
+}
+.Banner .BannerRigth{
+  font-size: 1.1em;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5rem;
+  margin: 1px;
+  background-color: #ebebeb;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+  box-shadow: 3px 3px #888888;
+}
+
+
+
+.Banner .BannerRigth:hover{
+background-color: #474747;
+color :#ffff;
+cursor: pointer;
+}
+
+.Banner .BannerMenu{
+  display: flex;
+  align-items: center;
   
 }
+
+
+.likeButton{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.likeButtonDetails{
+  bottom: 82%;
+  left: 69%;
+  position: sticky;
+  width:3em ;
+  height: 3em;
+  right: 10px;
+  cursor: pointer;
+}
+
 .error{
   background-color: #ad2323;
   color: #ffff;
@@ -39,6 +88,7 @@
 .navbar ul {
   display: flex;
   justify-content: flex-start;
+  
   
 }
 .navbar ul li{
@@ -104,6 +154,7 @@
 .product-details{
   align-self: center;
   text-align:center;
+
 }
 
 .product-description {
