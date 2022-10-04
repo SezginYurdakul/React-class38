@@ -26,49 +26,55 @@ export default function FavProducts() {
 
     useEffect(() => {
         setFavProducts(products.filter((p) => favorites.includes(p.id)));
-    }, [products])
+    }, [products, favorites])
 
     return (
         <div>
             <Banner banner={'Favorites'} />
+            {isLoadingProd ? (<h3 className="loading">Product List is loading ..</h3>)
+                : errorProd ? (<h3 className="error">{errorProd}</h3>)
 
-            {favProducts && (
-                <ul className="productList">
-                    {favProducts.map((product) => {
-                        const isFavorite = favorites.includes(product.id)
+                    : (
+                        <ul className="productList">
+                            {favProducts.map((product) => {
+                                const isFavorite = favorites.includes(product.id)
 
-                        function setFavorite(event) {
-                            event.preventDefault()
-                            changeFavorite(product.id)
-                        }
-                        return (
-                            <li
-                                onClick={() => {
-                                    routeChange(product.id)
-                                }}
-                                className="productCard"
-                                key={product.id}
-                            >
-                                <div className="product">
-                                    <img
-                                        key={product.title}
-                                        className="img"
-                                        src={product.image}
-                                        alt={product.title}
-                                    ></img>
-                                    <span className="title">{product.title}</span>
-                                    <img
-                                        className="likeButton"
-                                        src={isFavorite ? heartSolid : heartRegular}
-                                        onClick={setFavorite}
-                                        alt="fav"
-                                    />
-                                </div>
-                            </li>
-                        )
-                    })}
-                </ul>
-            )}
+                                function setFavorite(event) {
+                                    event.preventDefault()
+                                    changeFavorite(product.id)
+                                }
+                                return (
+                                    <li
+                                        onClick={() => {
+                                            routeChange(product.id)
+                                        }}
+                                        className="productCard"
+                                        key={product.id}
+                                    >
+                                        <div className="product">
+                                            <img
+                                                key={product.title}
+                                                className="img"
+                                                src={product.image}
+                                                alt={product.title}
+                                            ></img>
+                                            <span className="title">{product.title}</span>
+                                            <img
+                                                className="likeButton"
+                                                src={isFavorite ? heartSolid : heartRegular}
+                                                onClick={setFavorite}
+                                                alt="fav"
+                                            />
+                                        </div>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    )}
+
         </div>
     )
 }
+
+
+
