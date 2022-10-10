@@ -6,8 +6,6 @@ import ProductDetails from "./components/ProductDetail";
 import FavProducts from "./components/FavProducts";
 import { FavoriteProvider } from "./context/FavoriteContext";
 
-
-
 function App() {
 
   return (

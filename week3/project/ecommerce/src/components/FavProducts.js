@@ -16,8 +16,8 @@ export default function FavProducts() {
     )
 
     let navigate = useNavigate()
-    const routeChange = (pathExtension) => {
-        let path = `/products/${pathExtension}`
+    const routeChange = (productId) => {
+        let path = `/products/${productId}`
         navigate(path)
     }
 
@@ -26,6 +26,7 @@ export default function FavProducts() {
 
     useEffect(() => {
         setFavProducts(products.filter((p) => favorites.includes(p.id)));
+  
     }, [products, favorites])
 
     return (

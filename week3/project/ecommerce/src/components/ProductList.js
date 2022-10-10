@@ -20,9 +20,8 @@ const ProductsList = ({ products }) => {
         const isFavorite = favorites.includes(product.id);
 
         function setFavorite(event) {
-          console.log(event)
           event.preventDefault();
-          changeFavorite(product.id)
+          changeFavorite(product.id);
         }
 
         return (

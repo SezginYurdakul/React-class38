@@ -6,7 +6,6 @@ import ProductsList from "./ProductList";
 
 
 const Home = () => {
-
     const [categoryList, setCategoryList] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [products, setProducts] = useState([]);
