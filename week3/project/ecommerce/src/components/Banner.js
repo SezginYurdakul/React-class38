@@ -5,11 +5,11 @@ const Banner = ({ banner }) => {
     const navigate = useNavigate();
 
     return (
-        <div className="Banner">
+        <div className="banner">
             <h1>{banner}</h1>
-            <div className="BannerMenu">
-                <h1 className="BannerRigth" onClick={() => { navigate('/') }}> Products</h1>
-                <h1 className="BannerRigth" onClick={() => { navigate('/favorites') }}> Favorites</h1>
+            <div className="bannerMenu">
+                <h1 className="bannerRigth" onClick={() => { navigate('/') }}> Products</h1>
+                <h1 className="bannerRigth" onClick={() => { navigate('/favorites') }}> Favorites</h1>
             </div>
         </div>
     )
