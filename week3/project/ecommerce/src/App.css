@@ -185,7 +185,7 @@ cursor: pointer;
 }
 
 
-@media (max-width:750px) {
+@media (max-width:600px) {
   .productList{
     grid-template-columns: repeat(1, 1fr);
   }
@@ -203,13 +203,13 @@ cursor: pointer;
   }
   }
 
-@media (min-width:751px) {
+@media (min-width: 600px) and (max-width: 1200px) {
   .productList{
       grid-template-columns: repeat(2, 1fr);
     }
     }
 
-@media (min-width:1200px) {
+@media (min-width: 1200px) {
   .productList{
       grid-template-columns: repeat(3, 1fr);
     }
